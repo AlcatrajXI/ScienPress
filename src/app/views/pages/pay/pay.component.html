@@ -1,0 +1,65 @@
+<div class="page-content defaultnew">
+  <div class="container-fluid">
+    <h2 class="notop-margin">Welcome to Scientific Press International Limited</h2>
+    <p>Scientific Press International Limited provides free access to research information to the international
+      community without financial, legal or technical barriers.</p>
+    <p>All the journals from this organization will be freely distributed and available from multiple websites.</p>
+    <p>Here you can find information about our editions: descriptions, full tables of contents, instructions to authors,
+      online editions, articles in press. </p>
+    <form [formGroup]="payForm" class="form-horizontal">
+      <div class="form-group">
+        <div class="col-sm-3"><label>Journals </label></div>
+        <div class="col-sm-6 col-md-4">
+          <select id="JournalsLst2"  formControlName="journal" type="text" class="form-control">
+            <option id="0">
+              <!--Select Journal-->
+            </option>
+            <option value="72_Business & Entrepreneurship Journal">Business & Entrepreneurship Journal</option>
+            <option value="55_  Advances in Management and Applied Economics         "> Advances in Management and
+              Applied Economics </option>
+            <option value="56_Journal of Applied Finance & Banking">Journal of Applied Finance & Banking</option>
+            <option value="68_Journal of Statistical and Econometric Methods ">Journal of Statistical and Econometric
+              Methods </option>
+            <option value="69_Journal of Finance and Investment Analysis ">Journal of Finance and Investment Analysis
+            </option>
+            <option value="70_Communications in Mathematical Finance">Communications in Mathematical Finance</option>
+            <option value="57_Journal of Applied Mathematics &  Bioinformatics">Journal of Applied Mathematics &
+              Bioinformatics</option>
+            <option value="58_Journal of Computations & Modelling">Journal of Computations & Modelling</option>
+            <option value="60_Theoretical Mathematics & Applications">Theoretical Mathematics & Applications</option>
+            <option value="59_Journal of Earth Sciences and Geotechnical Engineering">Journal of Earth Sciences and
+              Geotechnical Engineering</option>
+            <option value="71_Journal of Applied Medical Sciences">Journal of Applied Medical Sciences</option>
+            <option value="73_International Journal of Health Research and Innovation ">International Journal of Health
+              Research and Innovation </option>
+            <option value="86_International Journal Of Occupational Health and Public Health Nursing ">International
+              Journal Of Occupational Health and Public Health Nursing </option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-3"><label>Article Tracking Number </label></div>
+        <div class="col-sm-6 col-md-4"><input type="text" formControlName="trackingNo" class="form-control" /></div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-3"><label>Article Title</label></div>
+        <div class="col-sm-6 col-md-4"><input type="text" formControlName="title" class="form-control" /></div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-3"><label>Author</label></div>
+        <div class="col-sm-6 col-md-4"><input type="text" formControlName="author" class="form-control" /></div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-3"><label>Amount $</label></div>
+        <div class="col-sm-6 col-md-4">
+          <input type="text" formControlName="amount" class="form-control" /></div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-9 col-md-7 text-center">
+          <input type="submit" [disabled]="payForm.invalid" class="btn btn-primary" name="btnsubmit" value="Submit" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

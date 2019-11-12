@@ -1,0 +1,58 @@
+<div class="page-content">
+  <div class="container-fluid">
+    <h2 class="notop-margin">Contact Us</h2>
+    <table class="table contactus">
+      <tr>
+        <td>Address</td>
+        <td>
+          <span>Scientific Press International Limited</span>
+          <span>11b Chevron Place</span>
+          <span>Ilam, Christchurch,</span>
+          <span>8041, New Zealand</span>
+        <td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><a href="mailto:info@scienpress.com">info@scienpress.com</a></td>
+      </tr>
+      <!-- /#wrapper	<tr><td>Phone</td><td>+44 (0) 20 3195 3829</td></tr>
+      <tr><td>Fax</td><td>+44 (0) 20 7566 3935</td></tr>	-->
+    </table>
+    <h2>Contact Form</h2>
+    <div class="col-sm-12 col-md-6">
+      <div style="color:#F00; font-weight:700; font-size:12px;"></div>
+      <form role="form" class="form-horizontal contact" name="submission" [formGroup]="contactForm">
+        <div class="form-group">
+          <div id="toggleText" style="display: none;">This is Hidden Text</div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="vName" formControlName="name" placeholder="Your Name(*)" value="" />
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="vEmail" formControlName="email" placeholder="Your Email(*)" value="" />
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="vPhone" formControlName="phone" placeholder="Phone Number" value="" />
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="vCompany" formControlName="company" placeholder="Company Name" value="" />
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="vCompUrl" name="companyURL" placeholder="Company URL" value="" />
+        </div>
+        <div class="form-group">
+          <textarea id="vMessage" formControlName="message" class="form-control" placeholder="Your Message(*)"
+            rows="5"></textarea>
+        </div>
+        <div class="form-group text-center">
+            <re-captcha (resolved)="resolved($event)" siteKey="6Lc3-VkUAAAAANJUnwadcwPMlfheKM2jkI54QuN_"></re-captcha>`
+          <div class="g-recaptcha" data-sitekey="6Lc3-VkUAAAAANJUnwadcwPMlfheKM2jkI54QuN_" style="margin-bottom:10px;">
+          </div>
+          <button class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button>&nbsp;
+          <button class="btn btn-primary" id="reset">Clear</button><BR>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

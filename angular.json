@@ -24,6 +24,8 @@
               "src/assets"
             ],
             "styles": [
+              "./src/assets/css/bootstrap.min.css",
+              "./src/assets/css/custom_style22.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -89,6 +91,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,6 +123,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ScienPress"
 }

@@ -1,0 +1,70 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="top_nav">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" (click)="mobileMenu = !mobileMenu">
+          <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href=".html"><img src="/assets/images/logo_NZ_web.png" class="logo" /></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" [class.in]="mobileMenu" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="visible-xs" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a
+              routerLink="/">Home</a>
+          </li>
+          <li class="visible-xs " routerLinkActive="active">
+            <a routerLink="/journal" (click)="mobileMenu = false">Journals</a>
+          </li>
+          <li class="visible-xs " routerLinkActive="active">
+            <a routerLink="/conferences" (click)="mobileMenu = false">Conferences</a>
+          </li>
+          <li class="visible-xs " routerLinkActive="active">
+            <a routerLink="/books" (click)="mobileMenu = false">Books</a>
+          </li>
+          <li class="visible-xs " routerLinkActive="active">
+            <a routerLink="/pay" (click)="mobileMenu = false">Online Payment</a>
+          </li>
+          <li class="visible-xs " routerLinkActive="active">
+            <a routerLink="/faq" (click)="mobileMenu = false">FAQ</a>
+          </li>
+          <!--<li class="">
+              <a class='ContactPOP' id="ContactPOP" href="Subscribepop.html" onclick="return ContactForm();">Subscribe
+                to our Newsletter</a>
+            </li>-->
+          <li class="">
+            <a [routerLink]="['/about-us']" (click)="mobileMenu = false">About Scienpress</a>
+          </li>
+          <li class="">
+            <a [routerLink]="['/contact-us']" (click)="mobileMenu = false">Contact Us</a>
+          </li>
+        </ul><br />
+        <div class="search-div clearfix">
+          <form class="input-group custom-search-form" name="searchform" method="post"
+            action="http://scienpress.com/searchpage.asp">
+            <input type="text" class="form-control" name="searchtxt" placeholder="Search...">
+            <span class="input-group-btn">
+              <button class=" btn btn-default" type="button" (click)="search()">
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+              </button>
+            </span>
+          </form>
+        </div>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.top_nav -->
+    <div class="main-nav clearfix hidden-xs">
+      <ul class="clearfix">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/">Home</a></li>
+        <li routerLinkActive="active"><a routerLink="/journal">Journals</a></li>
+        <li routerLinkActive="active"><a routerLink="/conferences">Conferences</a></li>
+        <li routerLinkActive="active"><a routerLink="/books">Books</a></li>
+        <li routerLinkActive="active"><a routerLink="/pay">Online Payment</a></li>
+        <li routerLinkActive="active"><a routerLink="/faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</nav>
