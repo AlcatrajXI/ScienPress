@@ -296,7 +296,7 @@
         </table>
       </div>
       <div *ngIf="subID==6">
-        <div *ngIf="volID==0" class="issues">
+        <div *ngIf="volID==0&&issueID==0" class="issues">
 
           <h4>Issues</h4>
 
@@ -419,50 +419,121 @@
         <div *ngIf="volID!=0" class="issues">
           <ul class="issues-list">
             <li>
-              <span>Volume 10 - Issue 2</span>
-              <a href="http://www.scienpress.com/DB/RSS/56_410.xml"><img src="images/rss16-16.jpg" width="16"
+              <span>Volume 10 - Issue 2 </span>&nbsp;
+              <a href="http://www.scienpress.com/DB/RSS/56_410.xml"> <img src="/assets/images/rss16-16.jpg" width="16"
                   height="16" style="border:none"></a>
             </li>
 
-            <li><a href="journal_focus.asp?main_id=56&amp;Sub_id=IV&amp;Issue=1322495">Determinants of Corporate
+            <li><a [routerLink]="['/journal',5,6,'issue',4]">Determinants of Corporate
                 Dividend Policy under Hyperinflation and Dollarization by Firms in Zimbabwe</a>
               <span>S. Mbulawa, N. F. Okurut, M. M. Ntsosa and N. Sinha</span></li>
 
-            <li><a href="journal_focus.asp?main_id=56&amp;Sub_id=IV&amp;Issue=1328399">Performance and Cash Value of
+            <li><a [routerLink]="['/journal',5,6,'issue',4]">Performance and Cash Value of
                 Taiwan Multinational Firms’ FDI in ASEAN</a>
               <span>Min-Lee Chan, Kannika Duangnate and Cho-Min Lin</span></li>
 
-            <li><a href="journal_focus.asp?main_id=56&amp;Sub_id=IV&amp;Issue=1338239">Mergers and Acquisitions and how
+            <li><a [routerLink]="['/journal',5,6,'issue',4]">Mergers and Acquisitions and how
                 they affect the Labor productivity. Evidence from the Greek Banking system</a>
               <span>Dr. Kyriazopoulos Georgios and Thanou Efthymia</span></li>
 
-            <li><a href="journal_focus.asp?main_id=56&amp;Sub_id=IV&amp;Issue=1342175">Political Connections, Financial
+            <li><a [routerLink]="['/journal',5,6,'issue',4]">Political Connections, Financial
                 Constraints and Long-term Growth </a>
               <span>Haoxiang Tong, Boya Yu, Jing Wu and Guanping Zhou</span></li>
 
-            <li><a href="journal_focus.asp?main_id=56&amp;Sub_id=IV&amp;Issue=1363823">The Analysis of Repayment of
+            <li><a [routerLink]="['/journal',5,6,'issue',4]">The Analysis of Repayment of
                 Default Bonds: Evidence from China </a>
               <span>Li Li</span></li>
 
-            <li><a href="journal_focus.asp?main_id=56&amp;Sub_id=IV&amp;Issue=1365791">The effect of corruption on stock
+            <li><a [routerLink]="['/journal',5,6,'issue',4]">The effect of corruption on stock
                 market volatility</a>
               <span>Eleftherios Spyromitros</span></li>
 
-            <li><a href="journal_focus.asp?main_id=56&amp;Sub_id=IV&amp;Issue=1369727">Real estate prices, fiscal
+            <li><a [routerLink]="['/journal',5,6,'issue',4]">Real estate prices, fiscal
                 revenue and economic growth </a>
               <span>Xiaoyu Gao, Anjie Dong</span></li>
 
-            <li><a href="journal_focus.asp?main_id=56&amp;Sub_id=IV&amp;Issue=1377599">The Effects of Macroeconomic
+            <li><a [routerLink]="['/journal',5,6,'issue',4]">The Effects of Macroeconomic
                 Variables and Company’s Financial Ratios on Stock Prices of Coal Mining Companies Listed in Indonesia
                 Stock Exchange for the Period of 2013 - 2018</a>
               <span>Nidia Prastivini S. Sastralaga, Adler Haymans Manurung, Ferdinand D. Saragih and Benny
                 Hutahayan</span></li>
 
-            <li><a href="journal_focus.asp?main_id=56&amp;Sub_id=IV&amp;Issue=1379567">An Empirical Analysis on the
+            <li><a [routerLink]="['/journal',5,6,'issue',4]">An Empirical Analysis on the
                 Impact of Higher Education on Income Inequality </a>
               <span>Xinhua Hui</span></li>
 
           </ul>
+        </div>
+        <div *ngIf="issueID!=0" class="issues">
+
+          <h4>Mapping Start-up Businesses and Analyzing the Perspectives of Establishing a Greek Healthcare Start-up
+            Company</h4>
+
+          <ul style="border-bottom:none;">
+            <li>
+              <img src="/assets/images/pdf.jpg" alt="Pdf Icon">
+              <a [routerLink]="['/download',1033199]" target="_new"><b>[ Download ]</b></a>
+            </li>
+            <li>Times downloaded: <b>243</b></li>
+            <li>
+              <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:.0001pt;
+        text-align:center"><b><span style="line-height: 115%;">
+                    <font style="" face="arial">
+                      <font size="3">Abstract</font>
+                      <font size="2">
+                      </font>
+                    </font>
+                  </span></b></p>
+
+              <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:.0001pt;
+        text-align:center"><b><span style="line-height: 115%;">
+                    <font size="2" face="arial">&nbsp;</font>
+                  </span></b></p>
+
+              <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+        justify;tab-stops:63.8pt">
+                <font size="2" face="arial"><span lang="EN-GB" style="line-height: 115%;">Entrepreneurship seems
+                    to be taking strong action with ambitious researchers who dare to undertake
+                    professional initiatives for the treatment of diseases, such as cancer, and any
+                    kind of problems patients address today. After the analysis of the basic elements
+                    regarding the development of start-up businesses, current trends in healthcare
+                    are categorised and cases are in turn studied. The breakthroughs developed in
+                    healthcare primarily regard technologies such as Artificial Intelligence, Neuroscience
+                    Technology and Biotechnology, while Digital Health gains ground applied by
+                    several start-up businesses worldwide. By surveying their data, useful
+                    conclusions are drawn concerning the investment process of healthcare start-up
+                    businesses. In the attempt of analysing the perspectives of establishing such
+                    companies in Greece, the Greek healthcare start-ups are presented. Through an
+                    empirical study at the Greek companies, Greek reality is thus documented and
+                    data are presented in a plot. </span><span lang="EN-GB" style="line-height: 115%;">The
+                    purpose of this paper is to analyse the perspectives of establishing a Greek
+                    healthcare start-up company. The survey includes the significant components of
+                    attracting potential investors and offers evidence-based to healthcare funding.
+                    It also summarizes on the fundamental principles of forming a start-up company
+                    that mainly concerns health sector.</span></font>
+              </p>
+
+              <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+        justify"><span lang="EN-GB" style="line-height: 115%;">
+                  <font size="2" face="arial">&nbsp;</font>
+                </span></p>
+
+              <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+        justify">
+                <font size="2" face="arial"><b><span style="line-height: 115%;">Keywords: </span></b><span
+                    style="line-height: 115%;">Healthcare,
+                  </span><span lang="EN-GB" style="line-height: 115%;">Biotechnology</span><span
+                    style="line-height: 115%;">, </span><span lang="EN-GB" style="line-height: 115%;">Digital
+                    Health</span></font><span style="line-height: 115%;">
+                  <font size="2" style="" face="arial">, Innovation, Entrepreneurship, Start-up
+                    Companies, Geographical Information Systems, Mapping.</font><span style='font-family: " times=""
+                    new="" roman",="" serif;="" font-size:="" 12pt;"=""'>
+                  </span>
+                </span>
+              </p>
+            </li>
+          </ul>
+
         </div>
       </div>
       <div *ngIf="subID==7">
@@ -480,47 +551,52 @@
 
           <div class="col-sm-12 col-md-10">
             <div id="toggleText" style="display:none;"></div>
-            <form role="form" class="form-horizontal" id="frm1" enctype="multipart/form-data" accept-charset="utf-8"
-              action="http://www.scienpress.com/sendmailManu.asp?action=submission&amp;main_id=72" method="post"
-              name="submission">
+            <form [formGroup]="articleForm" role="form" class="form-horizontal" id="frm1" enctype="multipart/form-data"
+              accept-charset="utf-8">
               <div class="form-group">
                 <div class="col-md-3"><label>First name * </label></div>
-                <div class="col-md-9"><input type="text" name="fname" id="fname" class="form-control"></div>
+                <div class="col-md-9"><input type="text" formControlName="firstName" id="fname" class="form-control">
+                </div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>Last name * </label></div>
-                <div class="col-md-9"><input type="text" name="lname" id="lname" class="form-control"></div>
+                <div class="col-md-9"><input type="text" formControlName="lastName" id="lname" class="form-control">
+                </div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>Co-authors</label></div>
-                <div class="col-md-9"><input type="text" name="coauthors" id="coauthors" class="form-control"></div>
+                <div class="col-md-9"><input type="text" formControlName="coAuthors" id="coauthors"
+                    class="form-control"></div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>Organisation</label></div>
-                <div class="col-md-9"><input type="text" name="organisation" id="organisation" class="form-control">
+                <div class="col-md-9"><input type="text" formControlName="organisation" id="organisation"
+                    class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>Department</label></div>
-                <div class="col-md-9"><input type="text" name="department" id="department" class="form-control"></div>
+                <div class="col-md-9"><input type="text" formControlName="department" id="department"
+                    class="form-control"></div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>Street * </label></div>
-                <div class="col-md-9"><input type="text" name="street" id="street" class="form-control"></div>
+                <div class="col-md-9"><input type="text" formControlName="street" id="street" class="form-control">
+                </div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>ZIP/Post code * </label></div>
-                <div class="col-md-9"><input type="text" name="zip" id="zip" class="form-control"></div>
+                <div class="col-md-9"><input type="text" formControlName="zip" id="zip" class="form-control"></div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>City * </label></div>
-                <div class="col-md-9"><input type="text" name="city" id="city" class="form-control"></div>
+                <div class="col-md-9"><input type="text" formControlName="city" id="city" class="form-control"></div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>Country * </label></div>
                 <div class="col-md-9">
                   <input type="hidden" id="country1" name="country1" value="">
-                  <select name="country" id="country" class="form-control">
+                  <select formControlName="country" id="country" class="form-control">
                     <option value="00">please select...</option>
                     <option value="AF">AFGHANISTAN</option>
                     <option value="AX">LLAND ISLANDS</option>
@@ -773,34 +849,35 @@
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>Phone </label></div>
-                <div class="col-md-9"><input type="text" name="phone" id="phone" class="form-control"></div>
+                <div class="col-md-9"><input type="text" formControlName="phone" id="phone" class="form-control"></div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>Fax </label></div>
-                <div class="col-md-9"><input type="text" name="fax" id="fax" class="form-control"></div>
+                <div class="col-md-9"><input type="text" formControlName="fax" id="fax" class="form-control"></div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>E-mail * </label></div>
-                <div class="col-md-9"><input type="email" name="em" id="em" class="form-control"></div>
+                <div class="col-md-9"><input type="email" formControlName="email" id="em" class="form-control"></div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>Paper title * </label></div>
-                <div class="col-md-9"><input type="text" name="ptitle" id="ptitle" class="form-control"></div>
+                <div class="col-md-9"><input type="text" formControlName="paperTitle" id="ptitle" class="form-control">
+                </div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>Abstract * </label></div>
                 <div class="col-md-9">
-                  <textarea name="abstract" id="abstract" class="form-control" rows="3"></textarea>
+                  <textarea formControlName="abstract" id="abstract" class="form-control" rows="3"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-md-3"><label>Attached file * </label></div>
                 <div class="col-md-9">
-                  <input type="file" name="attach1" id="attach1">
+                  <input type="file" (change)="onFileChange($event)" name="attach1" id="attach1">
                 </div>
               </div>
               <div class="form-group text-center">
-                <button class="btn btn-primary" id="submit">Send form</button>
+                <button class="btn btn-primary" id="submit" (click)="submit()" [disabled]="articleForm.invalid">Send form</button>
                 <button class="btn btn-primary" id="reset">Clear form</button>
               </div>
               <input name="stage" value="enter_data" class="hide" type="hidden">

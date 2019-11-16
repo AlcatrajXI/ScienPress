@@ -16,6 +16,13 @@ const routes: Routes = [
         path: 'journal',
         children: [
           {
+            path: ':id/:sub/issue/:issue',
+            loadChildren: () =>
+              import('./views/pages/journal/focus/focus.module').then(
+                m => m.FocusModule
+              )
+          },
+          {
             path: ':id/:sub/:vol',
             loadChildren: () =>
               import('./views/pages/journal/focus/focus.module').then(
