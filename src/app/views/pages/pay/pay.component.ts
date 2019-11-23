@@ -106,7 +106,7 @@ export class PayComponent implements OnInit {
     const that = this;
     that.http
     .post(
-      'https://pentest.scienpress.com/api/pay.php',
+      'https://blogs.thecodefusion.com/api/pay.php',
       that.payForm.value)
       .subscribe(
         data => {

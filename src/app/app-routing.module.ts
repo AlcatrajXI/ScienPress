@@ -53,6 +53,13 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'thanks',
+        loadChildren: () =>
+          import('./views/pages/thanks/thanks.module').then(
+            m => m.ThanksModule
+          )
+      },
+      {
         path: 'conferences',
         loadChildren: () =>
           import('./views/pages/conferences/conferences.module').then(

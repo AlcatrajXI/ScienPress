@@ -8,20 +8,22 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
   contactForm: any;
-
+  captchaSolve = false;
+ // data-sitekey="6Lc3-VkUAAAAANJUnwadcwPMlfheKM2jkI54QuN_";
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', Validators.required, Validators.email],
-      phone: ['', Validators.required],
-      company: ['', Validators.required],
-      companyURL: ['', Validators.required],
+      phone: [''],
+      company: [''],
+      companyURL: [''],
       message: ['', Validators.required]
     });
   }
   resolved(captchaResponse: any) {
-    console.log(`Resolved captcha with response: ${captchaResponse}`);
+    this.captchaSolve = true;
+    // console.log(`Resolved captcha with response: ${captchaResponse}`);
   }
 }

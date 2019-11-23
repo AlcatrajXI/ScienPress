@@ -14,7 +14,12 @@ export class FocusComponent implements OnInit {
   volID: any = 0;
   issueID: any = 0;
   articleForm: any;
-  constructor(private route: ActivatedRoute, private formBuilder: FormBuilder, public http: HttpClient) {
+  constructor(
+    private route: ActivatedRoute,
+    private formBuilder: FormBuilder,
+    public http: HttpClient,
+    private router: Router
+  ) {
     route.params.subscribe(val => {
       if (this.route.snapshot.paramMap.get('sub') != null) {
         this.subID = this.route.snapshot.paramMap.get('sub');
@@ -32,19 +37,19 @@ export class FocusComponent implements OnInit {
     this.articleForm = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      coAuthors: ['', Validators.required],
-      organisation: ['', Validators.required],
-      department: ['', Validators.required],
+      coAuthors: [''],
+      organisation: [''],
+      department: [''],
       street: ['', Validators.required],
       zip: ['', Validators.required],
       city: ['', Validators.required],
       country: ['', Validators.required],
-      phone: ['', Validators.required],
-      fax: ['', Validators.required],
+      phone: [''],
+      fax: [''],
       email: ['', Validators.required],
       paperTitle: ['', Validators.required],
       abstract: ['', Validators.required],
-      attach: [null]
+      attach: ['', Validators.required]
     });
   }
   onFileChange(event) {
@@ -66,15 +71,24 @@ export class FocusComponent implements OnInit {
   submit() {
     const that = this;
     that.http
-    .post(
-      'https://pentest.scienpress.com/api/article.php',
-      that.articleForm.value)
+      .post('https://blogs.thecodefusion.com/api/article.php', that.articleForm.value)
       .subscribe(
-        data => {
-          console.log(data);
+        (data: any) => {
+          if (data.status === true) {
+            console.log(data);
+            that.router.navigate(['/thanks'], {
+              queryParams: {
+                id: data.id,
+                name:
+                  that.articleForm.value.firstName +
+                  ' ' +
+                  that.articleForm.value.lastName,
+                title: that.articleForm.value.paperTitle
+              }
+            });
+          }
         },
-        err => {
-        }
+        err => {}
       );
   }
 }

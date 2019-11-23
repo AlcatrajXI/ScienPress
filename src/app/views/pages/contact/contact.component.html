@@ -45,10 +45,8 @@
             rows="5"></textarea>
         </div>
         <div class="form-group text-center">
-            <re-captcha (resolved)="resolved($event)" siteKey="6Lc3-VkUAAAAANJUnwadcwPMlfheKM2jkI54QuN_"></re-captcha>`
-          <div class="g-recaptcha" data-sitekey="6Lc3-VkUAAAAANJUnwadcwPMlfheKM2jkI54QuN_" style="margin-bottom:10px;">
-          </div>
-          <button class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button>&nbsp;
+            <re-captcha (resolved)="resolved($event)" siteKey="6LdpDsQUAAAAABq_U_7uom7vsf_w2wDx8bZdSmi5"></re-captcha><br>
+          <button class="btn btn-primary" [disabled]="contactForm.invalid || !captchaSolve">Submit</button>&nbsp;
           <button class="btn btn-primary" id="reset">Clear</button><BR>
 
         </div>

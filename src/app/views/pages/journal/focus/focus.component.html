@@ -1,8 +1,8 @@
 <div class="breadcrumb">Journals &gt;&gt; Economics &amp; Statistics &gt;&gt; <span class="active">Business &amp;
     Entrepreneurship Journal</span></div>
-<div id="wrapper" class="clearfix" style="height: 605px;">
+<div id="wrapper" class="clearfix">
   <!-- Page Content -->
-  <div id="page-content-wrapper">
+  <div id="page-content-wrapper" style="min-height: 660px;">
 
     <div class="container-fluid">
       <h1>Business &amp; Entrepreneurship Journal</h1>
@@ -878,7 +878,7 @@
               </div>
               <div class="form-group text-center">
                 <button class="btn btn-primary" id="submit" (click)="submit()" [disabled]="articleForm.invalid">Send form</button>
-                <button class="btn btn-primary" id="reset">Clear form</button>
+                <button class="btn btn-primary" id="reset" (click)="articleForm.reset()">Clear form</button>
               </div>
               <input name="stage" value="enter_data" class="hide" type="hidden">
               <input name="MAX_FILE_SIZE" value="5242880" class="hide" type="hidden">
